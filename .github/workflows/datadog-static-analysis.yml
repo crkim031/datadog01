@@ -15,8 +15,8 @@ jobs:
         id: datadog-static-analysis
         uses: DataDog/datadog-static-analyzer-github-action@v1
         with:
-          dd_app_key: ${{ ba24f6f5bab921d5d06d8d6775105aea }}
-          dd_api_key: ${{ d82fc1a8564a367b9560fcca2b5e1b681aaa35b7 }}
+          dd_app_key: ${{ secrets.DD_APP_KEY }} 
+          dd_api_key: ${{ secrets.DD_API_KEY }}
           dd_site: "us3.datadoghq.com"
           cpu_count: 2
           enable_performance_statistics: false
