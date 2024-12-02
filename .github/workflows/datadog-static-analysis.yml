@@ -1,0 +1,23 @@
+name: Datadog Static Analysis
+
+on: 
+  push: # Push 이벤트 발생 시 실행
+
+jobs:
+  check-quality:
+    runs-on: ubuntu-latest
+    name: Datadog Static Analyzer
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check code meets quality standards
+        id: datadog-static-analysis
+        uses: DataDog/datadog-static-analyzer-github-action@v1
+        with:
+          dd_app_key: ${{ ba24f6f5bab921d5d06d8d6775105aea }}
+          dd_api_key: ${{ d82fc1a8564a367b9560fcca2b5e1b681aaa35b7 }}
+          dd_site: "datadoghq.com"
+          cpu_count: 2
+          enable_performance_statistics: false
+
