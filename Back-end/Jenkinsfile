@@ -5,7 +5,7 @@ pipeline {
         
         stage('github-clone') {
             steps {
-                git branch: 'master', credentialsId: 'crkim031', url: '{https://github.com/crkim031/datadog01.git}'
+                git branch: 'master', credentialsId: 'crkim031', url: 'https://github.com/crkim031/datadog01.git'
             }
         }
         
