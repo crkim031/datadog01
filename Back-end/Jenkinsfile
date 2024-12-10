@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    
+    stages {
+        
+        stage('github-clone') {
+            steps {
+                git branch: 'master', credentialsId: 'crkim031', url: '{https://github.com/crkim031/datadog01.git}'
+            }
+        }
+        
+   		// stage...
+   	}
+}
+
